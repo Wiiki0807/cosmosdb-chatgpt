@@ -72,7 +72,8 @@ public class OpenAiService
             Temperature = 0.3f,
             NucleusSamplingFactor = 0.5f,
             FrequencyPenalty = 0,
-            PresencePenalty = 0
+            PresencePenalty = 0,
+            stream = True
         };
 
         Response<ChatCompletions> completionsResponse = await _client.GetChatCompletionsAsync(_modelName, options);
